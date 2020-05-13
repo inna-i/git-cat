@@ -1,29 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
+import Main from './components/Main/index';
+
 import './App.css';
 
-import SideMenu from './components/SideMenu';
+class App extends React.Component {
+		constructor(props) {
+				super(props);
+				this.state = {
+					user: {},
+					isLoaded: false,
+				};
+		}
 
-function App() {
-  return (
-    <div className="App">
-      <SideMenu />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+		getUser(userId) {
+			fetch(`https://api.github.com/users`)
+				.then(response => response.json())
+				.then(result => result.find(user => user.id === userId))
+				.then(user => this.setState({
+					user: user,
+					isLoaded: true
+				}))
+				.catch(reason => console.log('Error: ' + reason));
+		}
+
+		componentDidMount() {
+			// TODO: retrieve id from url.
+			this.getUser(5);
+		}
+
+	render() {
+			const {user, isLoaded} = this.state;
+
+		return (<Main user={this.state.user} />);
+		}
 }
 
 export default App;

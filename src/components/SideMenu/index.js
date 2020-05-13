@@ -1,28 +1,41 @@
-import React, { Component } from 'react';
+import React from "react";
+import UserInfo from "../UserInfo/index";
+import "./style.css";
+import { NavLink } from "react-router-dom";
 
-const menuItems = [{
+const links = [{
+    to: '/repositories',
     label: 'Repositories',
-    onClick: () => console.log('click'),
-    icon: 'branch',
 }, {
+    to: '/subscriptions',
+    label: 'Subscriptions',
+}, {
+    to: '/followers',
     label: 'Followers',
-    onClick: () => console.log('click'),
-    icon: 'follow',
-}];
+}, {
+    to: '/about',
+    label: 'About',
+}]
 
-class SideMenu extends Component {
+class SideMenu extends React.Component {
     render() {
         return (
-            <div className="w-side-menu">
-                <ul>
+            <div className="side-menu">
+                <UserInfo
+                    login={this.props.user.login}
+                    avatar={this.props.user.avatar_url} />
+
+                <ul className="nav-tabs">
                     {
-                        menuItems.map((item, idx) => (
-                            <li key={`menu-item-${idx}`}><a>{item.label}</a></li>)
-                        )
+                        links.map(link => (
+                            <li key={`${link.to}-item`} className="nav-item">
+                                <NavLink className="nav-link" to={link.to}>{link.label}</NavLink>
+                            </li>
+                        ))
                     }
                 </ul>
             </div>
-        )
+        );
     }
 }
 
