@@ -1,0 +1,11 @@
+
+/* user info */
+.user-info {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.user-info img {
+    height: 120px;
+    border-radius: 50%;
+}
