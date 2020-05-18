@@ -1,38 +1,32 @@
-import React, { useEffect, useState } from "react";
-import "./style.css";
+import React, { useEffect, useState } from 'react';
 
-const url = 'https://api.github.com/users/inna-i/repos';
+import List from '../List';
+import { GITHUB_API, USERNAME } from '../../config/constants';
 
 function RepoList() {
     const [repos, setRepos] = useState(null);
-
+    
     useEffect(() => {
         if (!repos) {
-            fetch(url)
+            fetch(`${GITHUB_API}/${USERNAME}/repos`)
                 .then(res => res.json())
                 .then(res => setRepos(res))
                 .catch(e => console.error(e));
         }
     })
    
-    return (
-        <div className="list">
-            <div className="list-header">
-               <h3>Repositories</h3>
-               <p>There is a list of user repos in GitHub</p>
-            </div>
-            <div className="list-items">
-                {
-                    repos && repos.map(repo => (
-                        <div className="list-item" key={repo.id}>
-                            <span>{repo.owner.login}</span>
-                            <span>{repo.name}</span>
-                            <span>{repo.description || 'no description'}</span>
-                        </div>
-                    ))
-                }
-            </div> 
-        </div>
+    return (      
+        <List
+            isLoading={!repos}
+            title="Repositories"
+            subTitle="List of active repositories"
+            items={repos && repos.map(repo => ({
+                id: repo.id,
+                login: repo.owner.login,
+                name: repo.name || '',
+                description: repo.description || 'no description',
+            }))}
+        />      
     )
 }
 

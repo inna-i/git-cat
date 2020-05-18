@@ -23,11 +23,16 @@
     transition: all 0.2s;
 }
 
+.nav-link.active {
+    color: #4c56c0;
+    background: #f5f7fb;
+}
+
 .nav-tabs {
     padding-left: 25px;
 }
 
-.nav-link.active {
-    color: #4c56c0;
-    background: #f5f7fb;
+.nav-icon {
+    display: inline-block;
+    margin-right: 10px;
 }
