@@ -1,5 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import {
+	BrowserRouter as Router,
+	Switch, Route, Redirect,
+} from 'react-router-dom';
 
 import Header from '../Header';
 import About from '../About';
@@ -12,10 +15,9 @@ import SideMenu from '../SideMenu';
 import './style.css';
 
 const routes = [{
-	path: '/',
-	exact: true,
-	key: 'about',
-	children: <About />,
+	path: '/about',
+	key: 'default',
+	children: <About />,	
 }, {
 	path: '/repositories',
 	key: 'repo',
@@ -30,8 +32,9 @@ const routes = [{
 	children: <FollowersList />,
 }, {
 	path: '/',
+	exact: true,
 	key: 'default',
-	children: <About />,
+	render: () => <Redirect to="/about" />,
 }];
 
 class Main extends React.Component {

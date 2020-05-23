@@ -22,14 +22,14 @@ const links = [{
     label: 'Followers',
     icon: faUsers,
 }, {
-    to: '/',
+    to: '/about',
     label: 'About',
     icon: faUser,
 }]
 
 class SideMenu extends React.Component {
     render() {
-        return (           
+        return (
             <div className="side-menu">
                     <UserContext.Consumer>
                     {
@@ -55,7 +55,7 @@ class SideMenu extends React.Component {
                         ))
                     }
                 </ul>
-            </div>                   
+            </div> 
         );
     }
 }

@@ -1,15 +1,42 @@
-import React from "react";
-import "./style.css";
+import React, { useEffect, useState } from 'react';
 
-class Header extends React.Component {
-    render() {
-        return(
-            <header>
-                <div className="welcome-block">Welcome to GitCat</div>
-                <div className="info-block">Statistic</div>
-            </header>
-        );
-    }
+import { GITHUB_API } from '../../config/constants';
+import logo from '../../assets/github-logo.png';
+import './style.css';
+import { UserContext } from '../../Context/UserContext';
+
+
+function Header() {
+    const [events, setEvents] = useState(0);
+ 
+    useEffect(() => {
+        fetch(`${GITHUB_API}/inna-i/received_events`)
+            .then(res => res.json())
+            .then(res => setEvents(res.length))
+            .catch(e => console.error(e))
+    }, [events])
+
+   
+    return(
+        <header>
+            <div className="welcome-block">
+                Welcome to
+                <p>GitCat</p>
+                <img src={logo} alt="github logo"/>
+            </div>
+            <div className="info-block">
+                <UserContext.Consumer>
+                    {({ user }) => user && (
+                        <ul>
+                            <li>Recieved events: {events}</li>
+                            <li>Followers: {user.followers}</li>
+                            <li>Repos: {user.public_repos}</li>
+                        </ul>
+                    )}
+                </UserContext.Consumer>               
+            </div>
+        </header>
+    );
 }
 
 export default Header;

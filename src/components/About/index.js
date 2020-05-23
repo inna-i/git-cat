@@ -35,7 +35,9 @@ function About() {
                                 <h4>Account details:</h4>
                                 <ul>
                                     { detailFields.map(detail => (
-                                        <li key={detail.key}><b>{detail.label}:</b> {user[detail.key] ? user[detail.key] : '-'}</li>
+                                        <li key={detail.key}>
+                                            <b>{detail.label}:</b> {user[detail.key] ? user[detail.key] : `${detail.label.toLowerCase()} is not set`}
+                                        </li>
                                     ))}
                                 </ul>
                             </div>
