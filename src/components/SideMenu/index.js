@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeBranch, faUser, faUsers, faLink } from '@fortawesome/free-solid-svg-icons';
 
 import UserInfo from '../UserInfo/index';
+// User Context
+import { UserContext } from "../../Context/UserContext";
 
 import './style.css';
 
@@ -20,18 +22,24 @@ const links = [{
     label: 'Followers',
     icon: faUsers,
 }, {
-    to: '/about',
+    to: '/',
     label: 'About',
     icon: faUser,
 }]
 
 class SideMenu extends React.Component {
     render() {
-        return (
+        return (           
             <div className="side-menu">
-                <UserInfo
-                    login={this.props.user.login}
-                    avatar={this.props.user.avatar_url} />
+                    <UserContext.Consumer>
+                    {
+                        ({ user }) => user && (
+                            <UserInfo
+                                login={user.login}
+                                avatar={user.avatar_url} />
+                            )
+                        }
+                    </UserContext.Consumer>
 
                 <ul className="nav-tabs">
                     {
@@ -47,7 +55,7 @@ class SideMenu extends React.Component {
                         ))
                     }
                 </ul>
-            </div>
+            </div>                   
         );
     }
 }

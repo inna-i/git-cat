@@ -12,7 +12,8 @@ import SideMenu from '../SideMenu';
 import './style.css';
 
 const routes = [{
-	path: '/about',
+	path: '/',
+	exact: true,
 	key: 'about',
 	children: <About />,
 }, {
@@ -27,6 +28,10 @@ const routes = [{
 	path: '/followers',
 	key: 'followers',
 	children: <FollowersList />,
+}, {
+	path: '/',
+	key: 'default',
+	children: <About />,
 }];
 
 class Main extends React.Component {
@@ -34,7 +39,7 @@ class Main extends React.Component {
 		return (
 			<div className='content'>
 				<Router>
-					<SideMenu user={this.props.user} />
+					<SideMenu/>
 					<main>
 						<Header/>
 						<Switch>

@@ -13,7 +13,7 @@ function RepoList() {
                 .then(res => setRepos(res))
                 .catch(e => console.error(e));
         }
-    })
+    });
    
     return (      
         <List

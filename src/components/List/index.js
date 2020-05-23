@@ -12,9 +12,9 @@ function List(props) {
     const handleFilter = value => {
         setFilterText(value);
         const filteredList = props.items.filter((item) => {
-            const repoName = item.name.toLowerCase() + item.description.toLowerCase();
+            const listItems = item.name.toLowerCase() + item.description.toLowerCase();
 
-            return repoName.indexOf(filterText.toLowerCase()) !== -1;
+            return listItems.indexOf(filterText.toLowerCase()) !== -1;
         });
 
         setFilteredItems(filteredList);

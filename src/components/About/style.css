@@ -1,0 +1,35 @@
+.about {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.about-logo {
+    margin-right: 30px;
+    max-width: 400px;
+}
+
+.about-logo img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.about-content h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-content h4 {
+    color: #4f5ebf;
+}
+
+.about-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.about-content li {
+    margin-bottom: 15px;
+}
