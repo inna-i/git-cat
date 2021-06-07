@@ -7,8 +7,10 @@ on:
   schedule:
     # * is a special character in YAML so you have to quote this string
     # Every Monday at 1PM UTC (9AM EST)
+    # first - minutes
+    # second - hours
     # the last * - is day of the week (0 - 6 or SUN-SAT) text
-    - cron:  '* * * * 1'
+    - cron:  '* * * * *'
 
 jobs:
   createPullRequest:
