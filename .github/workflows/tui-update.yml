@@ -9,7 +9,7 @@ on:
     # first - minutes
     # second - hours
     # the last * - is day of the week (0 - 6 or SUN-SAT) text
-    - cron:  '15,20,25,30,35 * * * *'
+    - cron:  '15,20,25,30,35,45,50 * * * *'
 
 jobs:
   update-deps:
@@ -22,18 +22,21 @@ jobs:
 
       - name: Set ID value
         run: |
-          MY_VAR=$(curl 'https://api.github.com/users/1' | jq '.id')
+          echo 'MY_VAR<<EOF' >> $GITHUB_ENV
+          curl 'https://api.github.com/users/1' | jq '.id' >> $GITHUB_ENV
+          echo 'EOF' >> $GITHUB_ENV
 
       - name: Update dependencies
         run: |
           npx -p npm-check-updates ncu -u
           npm install
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
             branch: update-dependencies
             committer: GitHub <inna-i@github.com>
-            title: "feat: update report and use cron"
+            title: "feat(ID-${{env.MY_VAR}}): update packages"
             body: |
               Update packages
               - packages.json is changed
