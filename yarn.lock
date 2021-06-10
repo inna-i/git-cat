@@ -1947,11 +1947,6 @@
   dependencies:
     bootstrap-sass "3.4.1"
 
-"@talend/context@^3.4.0":
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/@talend/context/-/context-3.4.0.tgz#22b05d415c7f3f6f001080631bfdf4c286d7015d"
-  integrity sha512-XNqWLKl0mDbXGKQp7I0f+OMwva6E4Jjw4M09FaOqBqYwlfNFF2w+DzeSoWz1mM10NsC2d+CjojmfKsGV87qQbw==
-
 "@talend/design-system@^1.1.4":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@talend/design-system/-/design-system-1.2.3.tgz#cbd3c8724bf33116f8466e2c807b5f44602ae574"

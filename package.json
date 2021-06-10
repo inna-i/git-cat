@@ -37,7 +37,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "@talend/bootstrap-theme": "^6.27.0",
-    "@talend/context": "^3.4.0",
     "@talend/icons": "^6.27.0",
     "@talend/react-cmf": "^6.27.0",
     "@talend/react-cmf-router": "^3.5.1",
