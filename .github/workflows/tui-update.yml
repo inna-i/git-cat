@@ -28,8 +28,9 @@ jobs:
 
       - name: Update dependencies
         run: |
-          npx -p npm-check-updates ncu -u
-          npm install
+          npx -p npm-check-updates ncu '/@talend\/.*/' -u
+          yarn upgrade-deps
+          yarn
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3

@@ -7,7 +7,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "upgrade-tui": "talend-scripts upgrade:deps"
+    "upgrade-deps": "talend-scripts upgrade:deps"
   },
   "eslintConfig": {
     "extends": "react-app"
