@@ -29,7 +29,6 @@ jobs:
       - name: Update dependencies
         run: |
           npx -p npm-check-updates ncu '/@talend\/.*/' -u
-          yarn upgrade-deps
           yarn
 
       - name: Create Pull Request
