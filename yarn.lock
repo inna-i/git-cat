@@ -1940,10 +1940,10 @@
   dependencies:
     semver "^7.3.5"
 
-"@talend/bootstrap-theme@^6.27.0":
-  version "6.28.0"
-  resolved "https://registry.yarnpkg.com/@talend/bootstrap-theme/-/bootstrap-theme-6.28.0.tgz#037a0ac818d3f93ed4dd98a5290c1e75458f89c8"
-  integrity sha512-DN1zf2GPsyzeMD+jFv1gdNqTbqF8aK0WFze9DuVAhsaLWQT0ltxUZY1/eKEk6mBwFhe7GSx56W6KsRCifH6Z/g==
+"@talend/bootstrap-theme@^6.29.0":
+  version "6.29.0"
+  resolved "https://registry.yarnpkg.com/@talend/bootstrap-theme/-/bootstrap-theme-6.29.0.tgz#4f2ff267fee54ae3e71569f731544d0f4b51aa8a"
+  integrity sha512-/+o9dcULCJ1Ga5nDPfd+mNzKEN8GtGSrTqCJs2F+CYys/Oz9XNd3oJITur+UGcUP+rE1zD5iZlN2YGC409FFig==
   dependencies:
     bootstrap-sass "3.4.1"
 
@@ -1978,10 +1978,10 @@
     babel-eslint "^10.1.0"
     requireindex "~1.1.0"
 
-"@talend/icons@^6.27.0":
-  version "6.28.0"
-  resolved "https://registry.yarnpkg.com/@talend/icons/-/icons-6.28.0.tgz#70821ae7404220bc5202972f0ebba64dacd76084"
-  integrity sha512-uVmRujLABFUopVMZsxBzvf+xAfkhNzxsl6hrAwuMeso4OcwppR+91ffuAL/gQ9thNTP8VpN3Q1qeYhwOoa1c0Q==
+"@talend/icons@^6.29.0":
+  version "6.29.0"
+  resolved "https://registry.yarnpkg.com/@talend/icons/-/icons-6.29.0.tgz#615f99b01905060a4ed641079bb8bc0f93d92955"
+  integrity sha512-H3lDNrTu8ixnB7dYmeUsnHa809QC/oBKrTv2FKWjfdLrdw1lM+/vRO2lhW3PLJJIYM9KZ+tMZbwl1D0hzWc5lg==
 
 "@talend/json-schema-form-core@1.0.0-alpha.4":
   version "1.0.0-alpha.4"
@@ -2002,7 +2002,7 @@
     mkdirp "^1.0.4"
     semver "^7.3.2"
 
-"@talend/react-cmf-router@^3.5.1":
+"@talend/react-cmf-router@^3.5.2":
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/@talend/react-cmf-router/-/react-cmf-router-3.5.2.tgz#8cc85f56228ad0cfa707dbb39440b05fa1f10652"
   integrity sha512-ELRna8SCFVUsUg468cnC/9m+YcVDzyc88fbu6NqsSrlLW0QNImtMC5+M7/Varmgj41sW3narLacYN1i0AYbTsA==
@@ -2026,7 +2026,7 @@
     lodash "^4.17.15"
     mkdirp "^0.5.1"
 
-"@talend/react-cmf@^6.27.0", "@talend/react-cmf@^6.28.0":
+"@talend/react-cmf@^6.28.0":
   version "6.28.0"
   resolved "https://registry.yarnpkg.com/@talend/react-cmf/-/react-cmf-6.28.0.tgz#a977b39b47dd9bee312f41d685b90f46934e8c01"
   integrity sha512-W180i31DaWS9QFxP1ZFFwmIsioXW57Y3UefhtYVI3Udm3qUC7dkXSnckPufkSe5T5KKo0OprCNtgCvt0mBtVhg==
@@ -2055,13 +2055,43 @@
     redux-thunk "^2.2.0"
     uuid "^3.4.0"
 
-"@talend/react-components@^6.27.0":
-  version "6.28.0"
-  resolved "https://registry.yarnpkg.com/@talend/react-components/-/react-components-6.28.0.tgz#1ceb74b8897242aea2e5034d1a15c7d43d403432"
-  integrity sha512-mirdjJrfQsMYmlglUWcQdLMVhtMFX3EGx5A44LiI4WYenI4MK/iUzOxl7GdE9Kmj/17hQrg3D67+qR1+Fc5huQ==
+"@talend/react-cmf@^6.29.0":
+  version "6.29.0"
+  resolved "https://registry.yarnpkg.com/@talend/react-cmf/-/react-cmf-6.29.0.tgz#94006048cda5697a83efcf7625251d897762c24d"
+  integrity sha512-SLiHkCN5yOYGr5KYXBPonolQ6VJYTHLkD+iu8bp0ikiTzEdTgqpVTLV5p/Ay/NBqxsx8RAagn290AP322RPLWA==
+  dependencies:
+    "@sentry/browser" "^5.11.1"
+    deepmerge "^1.5.1"
+    hoist-non-react-statics "^2.5.5"
+    immutable "^3.8.1"
+    invariant "^2.2.2"
+    jsonpath "^1.0.0"
+    lodash "^4.17.15"
+    mkdirp "^1.0.4"
+    nested-combine-reducers "^1.2.2"
+    path-to-regexp "^2.0.0"
+    prop-types "^15.5.10"
+    react-immutable-proptypes "^2.1.0"
+    react-redux "^5.0.7"
+    redux "^3.7.2"
+    redux-batched-actions "^0.2.0"
+    redux-batched-subscribe "^0.1.6"
+    redux-saga "^0.15.4"
+    redux-storage "^4.1.2"
+    redux-storage-decorator-filter "^1.1.8"
+    redux-storage-decorator-immutablejs "^1.0.4"
+    redux-storage-engine-localstorage "^1.1.4"
+    redux-thunk "^2.2.0"
+    uuid "^3.4.0"
+
+"@talend/react-components@^6.29.0":
+  version "6.29.0"
+  resolved "https://registry.yarnpkg.com/@talend/react-components/-/react-components-6.29.0.tgz#95fb083d38aab84d379f29e7de4413e5b8694186"
+  integrity sha512-Skc2p5dXJluOfo/8PTNySMSbWP1XrK3hiEUafr8ZTTFQg/jpfJAHFpA+Q20IClZA1wqTjfEz7lzjTNz/jjsMvA==
   dependencies:
     "@popperjs/core" "^2.6.0"
     "@talend/design-system" "^1.1.4"
+    "@talend/utils" "^1.0.1"
     ally.js "^1.4.1"
     classnames "^2.2.5"
     d3 "^6.3.0"
@@ -2092,10 +2122,10 @@
     styled-components "^4.4.1"
     uuid "^3.4.0"
 
-"@talend/react-containers@^6.27.0":
-  version "6.28.0"
-  resolved "https://registry.yarnpkg.com/@talend/react-containers/-/react-containers-6.28.0.tgz#5accbb707abf99736e3b7d1cdd86a839f4c9cf25"
-  integrity sha512-CCH7C1FSMRKmLYMsdQNRg1WOYBYOUH9a/G3i/MuK2qjL1Lvj+6fZTskwrKPdq0V7lpAKYl9jUmDEx2xpSaSQGA==
+"@talend/react-containers@^6.29.0":
+  version "6.29.0"
+  resolved "https://registry.yarnpkg.com/@talend/react-containers/-/react-containers-6.29.0.tgz#61b9eb64508671dbea08315a3339e01d1450c9c1"
+  integrity sha512-gPE39PMj+9iBR3dZFiBgakzqWoUkk24o5CIxgoGY5aKoD4+jUnebFQvfPyHR3KeNIDA/yZXr7cY8EXXcN6m3Sw==
   dependencies:
     classnames "^2.2.5"
     immutable "^3.8.1"
@@ -2109,12 +2139,13 @@
     reselect "^2.5.4"
     uuid "^3.4.0"
 
-"@talend/react-forms@^6.27.0":
-  version "6.28.0"
-  resolved "https://registry.yarnpkg.com/@talend/react-forms/-/react-forms-6.28.0.tgz#b0d2857d1d19ab0487b2eec978728a4ebd2a53c5"
-  integrity sha512-2cxPewyuYvQ/z0qZb00XlKX4McvKxOJZPQUSTinuuXS0YG8j7dUnNRI0L4v1EdhtQ4/Azw789wQRAwCsmn9bmw==
+"@talend/react-forms@^6.29.0":
+  version "6.29.0"
+  resolved "https://registry.yarnpkg.com/@talend/react-forms/-/react-forms-6.29.0.tgz#816f11ee6afe83c006203ef0289d39256ce1f44b"
+  integrity sha512-tO2MDASi/uOZTpFGhQ5LbnY+AayMWxl5vjl4f4r41iDPU/lIGznwEHfQ0lMPMV2zodqNd8Shi0q+lAcaSZYWQg==
   dependencies:
     "@talend/json-schema-form-core" "1.0.0-alpha.4"
+    "@talend/utils" "^1.2.0"
     ajv "^6.2.1"
     classnames "^2.2.5"
     json-logic-js "^2.0.0"
@@ -2252,7 +2283,7 @@
   resolved "https://registry.yarnpkg.com/@talend/scripts-config-typescript/-/scripts-config-typescript-9.11.0.tgz#780a1714dce5997ac87facb0d021c94da9df307a"
   integrity sha512-oOMfuGj/Kbd8TH0a2IPBYqVvG2VuhmpWk0Ep6g6OMajdjSPqfH5d17AtU4mkzRRFrPwN2rVspRjPj2gEMiRwag==
 
-"@talend/scripts-core@^9.6.2":
+"@talend/scripts-core@^9.11.0":
   version "9.11.0"
   resolved "https://registry.yarnpkg.com/@talend/scripts-core/-/scripts-core-9.11.0.tgz#7508cddd6283a89eaac104d2df02ed8194b80e2e"
   integrity sha512-Kfu/GWWisEcO9ar7pbLWxolwAJ5yED0J8VQbFmN/nI1/oNSLFnkivu7wjA1xyn4qibAF93TXVN9VBE8WHuS6/Q==
@@ -2273,7 +2304,7 @@
     yargs "^15.3.0"
     yarn-deduplicate "^3.1.0"
 
-"@talend/scripts-preset-react@^9.6.2":
+"@talend/scripts-preset-react@^9.8.2":
   version "9.8.2"
   resolved "https://registry.yarnpkg.com/@talend/scripts-preset-react/-/scripts-preset-react-9.8.2.tgz#9367d04eba2619018c06299c2af82fedefafdeb4"
   integrity sha512-uEfIwqdBBbPvzxVl9gwq7hDwY6fpMmR2Hm9UhZjQ/0DNGuI1NQMa10M8JobMwkyuGJQJd4imyyPJgUDdL87Lsw==
@@ -2286,6 +2317,13 @@
     "@talend/scripts-config-react-webpack" "^9.9.6"
     "@talend/scripts-config-stylelint" "^1.0.0"
     "@talend/scripts-config-typescript" "^9.6.2"
+
+"@talend/utils@^1.0.1", "@talend/utils@^1.2.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@talend/utils/-/utils-1.3.0.tgz#3dd3a1fd984ab8a8ecc6d4daf7cf70cf0ae137e0"
+  integrity sha512-4gV65U/29FvYqqJWqKeWHyCc2bqKZ5wvlFl2ov7pGH7QspkH3MbuJ7Fvd0XqCCoi8xnS0JPmdItHHDIGpYR41w==
+  dependencies:
+    date-fns "^1.27.2"
 
 "@testing-library/dom@*":
   version "7.31.2"
