@@ -47,7 +47,7 @@ jobs:
           -H "Content-Type: application/json; charset=UTF-8" \
           -d '{"title": "TDOPS-333", "body": "Test", "userId": 1}' \
           https://jsonplaceholder.typicode.com/posts \
-          | jq '.title' >> $GITHUB_ENV
+          | jq -r '.title' >> $GITHUB_ENV
 
           echo 'EOF' >> $GITHUB_ENV
 
@@ -65,14 +65,14 @@ jobs:
         with:
             branch: update-dependencies
             committer: GitHub <inna-i@github.com>
-            title: "feat(${env.JIRA_KEY}): update packages"
+            title: "feat(${{ env.JIRA_KEY }}): update packages"
             body: |
               Update packages
               - packages.json is changed
               - yarn.lock updated and depuplicated
               - Auto-generated Jira item -[create-pull-request][1]
 
-              [1]: https://jira.talendforge.org/browse/${env.JIRA_KEY}
+              [1]: https://jira.talendforge.org/browse/${{ env.JIRA_KEY }}
             reviewers: inna-i
 
       - name: Check outputs
