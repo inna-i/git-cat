@@ -25,16 +25,23 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: Set ID value
-        # -u "${{ secrets.JIRA_USER }}:${{ secrets.JIRA_PASSWORD }}"
+      - name: Set JIRA_KEY value
         run: |
-          echo 'JIRA_ID<<EOF' >> $GITHUB_ENV
+          echo 'JIRA_KEY<<EOF' >> $GITHUB_ENV
 
           curl -X POST \
-          -H "Content-Type: application/json; charset=UTF-8" \
-          -d '{"title": "linuxize", "body": "${{ secrets.JIRA_USER }}", "userId": 1}' \
-          https://jsonplaceholder.typicode.com/posts \
-          | jq '.id' >> $GITHUB_ENV
+          --user "${{ secrets.JIRA_USER }}:${{ secrets.JIRA_PASSWORD }}" \
+          --header "Content-Type: application/json; charset=UTF-8" \
+          --data '{
+            "fields": {
+              "project": { "key": "TDOPS" },
+              "summary": "Upgrade TUI libs",
+              "description": "Upgrade TUI libs using latest published versions",
+              "issuetype": { "name": "Work Item" }
+            }
+          }' \
+          --url https://jira.talendforge.org/rest/api/2/issue \
+          | jq '.key' >> $GITHUB_ENV
 
           echo 'EOF' >> $GITHUB_ENV
 
@@ -52,7 +59,7 @@ jobs:
         with:
             branch: update-dependencies
             committer: GitHub <inna-i@github.com>
-            title: "feat(ID-${{env.JIRA_ID}}): update packages"
+            title: "feat(ID-${{env.JIRA_KEY}}): update packages"
             body: |
               Update packages
               - packages.json is changed
