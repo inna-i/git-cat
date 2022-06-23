@@ -1,9 +1,9 @@
 .side-menu {
-    background: #4c56c0;
-    color: #f5f7fb;
     min-width: 250px;
+    border-radius: 0 20px 20px 0;
+    color: #f5f7fb;
+    background: #4c56c0;
 }
-
 
 .nav-item {
     list-style-type: none;

@@ -7,12 +7,13 @@ header {
 .welcome-block {
     position: relative;
     display: inline-block;
-    padding: 10px;
+    padding: 10px 40px;
     margin-right: 25px;
-    height: 75px;
-    width: 160px;
+    height: 100px;
+    width: 250px;
     color: #fff;
     border-radius: 10px;
+    box-sizing: border-box;
     background: #9dd6ab;
 }
 
@@ -28,7 +29,7 @@ header {
     padding-top: 16px;
     padding-left: 5px;
     font-family: Georgia;
-    font-size: 22px;
+    font-size: 32px;
     font-weight: 600;
     font-style: italic;
     letter-spacing: 2px;
@@ -37,10 +38,11 @@ header {
 .info-block {
     display: inline-block;
     padding: 10px;
-    height: 75px;
-    width: 160px;
+    height: 100px;
+    width: 250px;
     border-radius: 10px;
     background: #4c56c0;
+    box-sizing: border-box;
     color: #fff;
     font-size: 14px;
     line-height: 24px;

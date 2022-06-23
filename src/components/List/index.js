@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faSpinner, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 import './style.css';
 
@@ -25,20 +25,26 @@ function List(props) {
     return (
         <div className="list">
             <div className="list-header">
-                <div className="list-title">
-                    <h3>{props.title}</h3>
-                    <p>{props.subTitle}</p>
+                <div className="list-filter-bar">
+                    <div className="list-title">
+                        <h3>{props.title}</h3>
+                        <p>{props.subTitle}</p>
+                    </div>
+                    <div className="list-filter">
+                        <FontAwesomeIcon icon={faSearch} />
+                        <input
+                            className="filter-input"
+                            placeholder="Filter"
+                            value={filterText}
+                            onChange={e => handleFilter(e.target.value)}
+                        />
+                    </div>
                 </div>
-                <div className="list-filter">
-                    <input
-                        className="filter-input"
-                        placeholder="Filter"
-                        value={filterText}
-                        onChange={e => handleFilter(e.target.value)}
-                    />
+                <div className="list-columns">
+                    {props.columns.map((col, index) => <span key={`col-name-${index}`}>{col.name}</span>)}
                 </div>
             </div>
-            <div className="list-items"> 
+            <div className="list-items custom-scrollbar"> 
                 {
                     props.isLoading
                         ? <div className="loader"><FontAwesomeIcon icon={faSpinner} size="lg" /></div>
