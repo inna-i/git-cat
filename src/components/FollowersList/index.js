@@ -1,25 +1,20 @@
 import React, { useEffect, useState } from "react";
 
 import List from "../List";
-import { GITHUB_API, USERNAME } from "../../config/constants";
-
-const columns = [
-  { name: "Follower" },
-  { name: "Follower repo" },
-  { name: "Description" },
-];
+import { fetchFollowers } from "../../services/fetchData";
+import columns from "./followersListConfig";
 
 function FollowersList() {
   const [followers, setFollowers] = useState(null);
 
   useEffect(() => {
-    if (!followers) {
-      fetch(`${GITHUB_API}/${USERNAME}/followers`)
-        .then((res) => res.json())
-        .then((res) => setFollowers(res))
-        .catch((e) => console.error(e));
-    }
-  });
+    const getData = async () => {
+      const data = await fetchFollowers();
+      setFollowers(data);
+    };
+
+    getData();
+  }, []);
 
   return (
     <List
