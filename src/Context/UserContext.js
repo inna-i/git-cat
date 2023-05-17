@@ -1,33 +1,16 @@
 import React, { createContext } from "react";
-import { fetchUser } from "../services/fetchData";
+import { useFetch } from "../hook/fetchHook";
 
 export const UserContext = createContext();
 
-class UserContextProvider extends React.Component {
-  state = {
-    user: null,
-  };
+function UserContextProvider(props) {
+  const [user] = useFetch('user');
 
-  componentDidMount() {
-    // fetch account by userName
-
-    const getData = async () => {
-      const data = await fetchUser();
-      this.setState({
-        user: data,
-      });
-    };
-
-    getData();
-  }
-
-  render() {
-    return (
-      <UserContext.Provider value={{ user: this.state.user }}>
-        {this.props.children}
-      </UserContext.Provider>
-    );
-  }
+  return (
+    <UserContext.Provider value={{ user }}>
+      {props.children}
+    </UserContext.Provider>
+  );
 }
 
 export default UserContextProvider;

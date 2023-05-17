@@ -1,2 +1,2 @@
 export const GITHUB_API = 'https://api.github.com/users';
-export const USERNAME = 'inna-i';
+export const USERNAME = 'maxkashchuk';

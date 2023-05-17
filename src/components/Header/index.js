@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import { GITHUB_API } from '../../config/constants';
 import logo from '../../assets/github-logo.png';
-import './style.css';
 import { UserContext } from '../../Context/UserContext';
+import './style.css';
 
 
 function Header() {

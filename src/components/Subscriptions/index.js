@@ -1,21 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { fetchSubscriptions } from "../../services/fetchData";
+import React from "react";
+import { useFetch } from "../../hook/fetchHook";
 
 import List from "../List";
 
 const columns = [{ name: "Owner" }, { name: "Name" }, { name: "Description" }];
 
 function SubscriptionList() {
-  const [subscriptions, setSubscriptions] = useState(null);
-
-  useEffect(() => {
-    const getData = async () => {
-      const data = await fetchSubscriptions();
-      setSubscriptions(data);
-    };
-
-    getData();
-  }, []);
+  const [subscriptions] = useFetch('subscriptions');
 
   return (
     <List

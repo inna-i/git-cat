@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import List from "../List";
-import { fetchFollowers } from "../../services/fetchData";
+import { useFetch } from "../../hook/fetchHook";
 import columns from "./followersListConfig";
 
 function FollowersList() {
-  const [followers, setFollowers] = useState(null);
-
-  useEffect(() => {
-    const getData = async () => {
-      const data = await fetchFollowers();
-      setFollowers(data);
-    };
-
-    getData();
-  }, []);
+  const [followers] = useFetch('followers');
 
   return (
     <List

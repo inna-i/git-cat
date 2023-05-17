@@ -27,37 +27,35 @@ const links = [{
     icon: faUser,
 }]
 
-class SideMenu extends React.Component {
-    render() {
-        return (
-            <div className="side-menu">
-                    <UserContext.Consumer>
-                    {
-                        ({ user }) => user && (
-                            <UserInfo
-                                login={user.login}
-                                avatar={user.avatar_url} />
-                            )
-                        }
-                    </UserContext.Consumer>
+function SideMenu() {
+    return (
+        <div className="side-menu">
+            <UserContext.Consumer>
+                {
+                    ({ user }) => user && (
+                        <UserInfo
+                            login={user.login}
+                            avatar={user.avatar_url} />
+                    )
+                }
+            </UserContext.Consumer>
 
-                <ul className="nav-tabs">
-                    {
-                        links.map(link => (
-                            <li key={`${link.to}-item`} className="nav-item">
-                                <NavLink className="nav-link" to={link.to}>
-                                    <i className="nav-icon">
-                                        <FontAwesomeIcon icon={link.icon} />
-                                    </i>
-                                    {link.label}
-                                </NavLink>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </div> 
-        );
-    }
+            <ul className="nav-tabs">
+                {
+                    links.map(link => (
+                        <li key={`${link.to}-item`} className="nav-item">
+                            <NavLink className="nav-link" to={link.to}>
+                                <i className="nav-icon">
+                                    <FontAwesomeIcon icon={link.icon} />
+                                </i>
+                                {link.label}
+                            </NavLink>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    );
 }
 
 export default SideMenu;

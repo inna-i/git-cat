@@ -1,21 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import List from "../List";
-import { fetchRepos } from "../../services/fetchData";
+import { useFetch } from "../../hook/fetchHook";
 
 const columns = [{ name: "Owner" }, { name: "Name" }, { name: "Description" }];
 
 function RepoList() {
-  const [repos, setRepos] = useState([]);
-
-  useEffect(() => {
-    const getData = async () => {
-      const data = await fetchRepos();
-      setRepos(data);
-    };
-
-    getData();
-  }, []);
+  const [repos] = useFetch('repos');
 
   return (
     <List
