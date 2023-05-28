@@ -44,7 +44,7 @@ function List(props) {
                     {props.columns.map((col, index) => <span key={`col-name-${index}`}>{col.name}</span>)}
                 </div>
             </div>
-            <div className="list-items custom-scrollbar"> 
+            <div className="list-items custom-scrollbar extra-class"> 
                 {
                     props.isLoading
                         ? <div className="loader"><FontAwesomeIcon icon={faSpinner} size="lg" /></div>
