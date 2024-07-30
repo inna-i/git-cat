@@ -31,7 +31,7 @@ const routes = [{
 	path: '/',
 	exact: true,
 	key: 'default',
-	render: () => <Redirect to="/about" />,
+	render: () => <Redirect to="/repositories" />,
 }];
 
 

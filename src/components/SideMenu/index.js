@@ -2,10 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeBranch, faUser, faUsers, faLink } from '@fortawesome/free-solid-svg-icons';
-
-import UserInfo from '../UserInfo/index';
-// User Context
-import { UserContext } from "../../Context/UserContext";
+import logo from '../../assets/github-logo.png';
 
 import './style.css';
 
@@ -30,15 +27,11 @@ const links = [{
 function SideMenu() {
     return (
         <div className="side-menu">
-            <UserContext.Consumer>
-                {
-                    ({ user }) => user && (
-                        <UserInfo
-                            login={user.login}
-                            avatar={user.avatar_url} />
-                    )
-                }
-            </UserContext.Consumer>
+            <div className="side-menu-logo">
+            <img src={logo} alt="github logo"/>
+            <span>GitCat</span>
+                
+            </div>
 
             <ul className="nav-tabs">
                 {

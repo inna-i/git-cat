@@ -6,7 +6,7 @@ class UserInfo extends React.Component {
         return (
             <div className="user-info">
                 <img src={this.props.avatar} alt="user avatar" />
-                <h1>{this.props.login}</h1>
+                <span className="user-login">{this.props.login}</span>
             </div>
         );
     }

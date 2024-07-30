@@ -32,7 +32,6 @@ function About() {
                             </div>
                             <div className="about-content">
                                 <h2>{user.name}</h2>
-                                <h4>Account details:</h4>
                                 <ul>
                                     { detailFields.map(detail => (
                                         <li key={detail.key}>

@@ -27,14 +27,14 @@ function List(props) {
             <div className="list-header">
                 <div className="list-filter-bar">
                     <div className="list-title">
-                        <h3>{props.title}</h3>
+                        <h3>{`${props.title} (${items.length})`}</h3>
                         <p>{props.subTitle}</p>
                     </div>
                     <div className="list-filter">
                         <FontAwesomeIcon icon={faSearch} />
                         <input
                             className="filter-input"
-                            placeholder="Filter"
+                            placeholder="Search..."
                             value={filterText}
                             onChange={e => handleFilter(e.target.value)}
                         />

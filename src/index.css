@@ -1,6 +1,26 @@
+:root {
+  /* Colors  */
+  --color-primary-background: #4c56c0;
+  --color-secondary-background-invert: #ffffff;
+  --color-secondary-background: #f5f7fb;
+  --color-primary-text-accent: #4c56c0;
+  --color-primary-text-invert: #ffffff;
+  /* Colors - components */
+  --color-primary-input-border: #F5F5FA;
+  /* Spacing */
+  --spacing-xxs: 5px;
+  --spacing-xs: 10px;
+  --spacing-s: 15px;
+  --spacing-m: 25px;
+  /* Sizes */
+  --heading-h1: 40px;
+  --heading-h2: 36px;
+  --heading-h3: 30px;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -42,10 +62,10 @@ h3 {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background: #f5f7fb;
+  background: var(--color-secondary-background);
 }
 
 main {
-  background: #f5f7fb;
+  background: var(--color-secondary-background);
   flex-grow: 1;
 }

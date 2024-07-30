@@ -8,7 +8,7 @@
 .list-header {
     padding: 10px 20px;
     margin-bottom: 5px;
-    background: #fff;
+    background: var(--color-secondary-background-invert);
     border-bottom: 1px dashed #ccc;
     border-radius: 10px;
 }
@@ -25,19 +25,21 @@
 
 .list-filter svg {
     position: absolute;
-    top: 6px;
-    left: 6px;
-    font-size: 14px;
+    top: 11px;
+    left: 10px;
+    font-size: 16px;
     color: #878787;
 }
 
 .filter-input {
     margin-bottom: 15px;
-    height: 24px;
-    border-radius: 5px;
+    height: 36px;
+    width: 220px;
     outline: none;
+    font-size: 14px;
+    text-indent: 35px;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    text-indent: 25px;
 }
 
 .list-columns {
@@ -63,7 +65,7 @@
     border-radius: 10px;
     height: 35px;
     line-height: 35px;
-    background: #fff;
+    background: var(--color-secondary-background-invert);
 }
 
 .list-item span {
@@ -80,5 +82,5 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: var(--color-secondary-background-invert);
 }
