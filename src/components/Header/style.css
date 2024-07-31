@@ -35,8 +35,8 @@ header {
 .info-block ul {
     position: absolute;
     top: 90px;
-    right: 20px;
-    padding: 25px;
+    right: 15px;
+    padding: var(--spacing-m);
     background: #fff;
     list-style: none;
     z-index: 100;
@@ -57,5 +57,5 @@ header {
     border-bottom: 15px solid #fff;
 }
 .info-block ul li {
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-xs);
 }

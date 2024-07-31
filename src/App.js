@@ -37,19 +37,21 @@ const routes = [{
 
 function App() {
   return (
-    <div className='content'>
-				<Router>
-          <UserContextProvider>
-            <SideMenu/>
-            <main>
-              <Header/>
-              <Switch>
-                { routes.map(route => <Route {...route} />) }		
-              </Switch>
-            </main>
-          </UserContextProvider>
-				</Router>
-			</div>
+    <div className="content">
+      <Router>
+        <UserContextProvider>
+          <SideMenu />
+          <main>
+            <Header />
+            <Switch>
+              {routes.map((route) => (
+                <Route {...route} />
+              ))}
+            </Switch>
+          </main>
+        </UserContextProvider>
+      </Router>
+    </div>
   );
 }
 

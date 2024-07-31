@@ -28,18 +28,18 @@
 }
 
 .nav-tabs {
-    padding-left: 25px;
+    padding-left: var(--spacing-m);
 }
 
 .nav-icon {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: var(--spacing-xs);
 }
 
 .side-menu-logo {
     display: flex;
     align-items: center;
-    padding: 20px 35px 10px;
+    padding: 20px 35px var(--spacing-xs);
     height: 100px;
     color: var(--color-text-primary-invert);
     border-radius: 10px;

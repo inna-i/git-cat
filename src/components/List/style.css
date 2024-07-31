@@ -6,7 +6,7 @@
 }
 
 .list-header {
-    padding: 10px 20px;
+    padding: var(--spacing-xs) var(--spacing-m);
     margin-bottom: 5px;
     background: var(--color-background-secondary-invert);
     border-bottom: 1px dashed #ccc;
@@ -43,7 +43,7 @@
 }
 
 .list-columns {
-    margin: 25px 0 5px;
+    margin: var(--spacing-m) 0 var(--spacing-xxs);
     font-size: 12px;
     font-weight: 600;
 }
@@ -60,7 +60,7 @@
 }
 
 .list-item {
-    padding: 5px 10px 5px 20px;
+    padding: var(--spacing-xxs) var(--spacing-xs) var(--spacing-xxs) var(--spacing-m);
     border-bottom: 1px dashed #ccc;
     border-radius: 10px;
     height: 35px;

@@ -8,7 +8,7 @@ function UserContextProvider(props) {
 
   return (
     <UserContext.Provider value={{ user }}>
-      {props.children}
+      {user ? props.children : null}
     </UserContext.Provider>
   );
 }

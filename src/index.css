@@ -1,9 +1,9 @@
 :root {
   /* Colors  */
-  --color-background-primary: #4c56c0;
+  --color-background-primary: #009688;
   --color-background-secondary-invert: #ffffff;
   --color-background-secondary: #f5f7fb;
-  --color-text-primary-accent: #4c56c0;
+  --color-text-primary-accent: #009688;
   --color-text-primary-invert: #ffffff;
   --color-border-primary: #F5F5FA;
   /* Spacing */
