@@ -3,7 +3,9 @@
 .user-info {
     display: flex;
     align-items: center;
-    color: var(--color-primary-text-invert);;
+    padding-left: 20px;
+    border-left: 1px solid var(--color-border-primary);
+    color: var(--color-text-primary-invert);
 }
 
 .user-info img {

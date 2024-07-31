@@ -1,7 +1,7 @@
 .side-menu {
     min-width: 250px;
-    color: var(--color-secondary-background);
-    background: var(--color-primary-background);
+    color: var(--color-background-secondary);
+    background: var(--color-background-primary);
 }
 
 .nav-item {
@@ -18,13 +18,13 @@
     text-decoration: none;
     text-transform: uppercase;
     font-size: 15px;
-    color: var(--color-secondary-background);
+    color: var(--color-background-secondary);
     transition: all 0.2s;
 }
 
 .nav-link.active {
-    color: var(--color-primary-text-accent);
-    background: var(--color-secondary-background);
+    color: var(--color-text-primary-accent);
+    background: var(--color-background-secondary);
 }
 
 .nav-tabs {
@@ -41,7 +41,7 @@
     align-items: center;
     padding: 20px 35px 10px;
     height: 100px;
-    color: var(--color-primary-text-invert);
+    color: var(--color-text-primary-invert);
     border-radius: 10px;
     box-sizing: border-box;
 }

@@ -8,7 +8,7 @@
 .list-header {
     padding: 10px 20px;
     margin-bottom: 5px;
-    background: var(--color-secondary-background-invert);
+    background: var(--color-background-secondary-invert);
     border-bottom: 1px dashed #ccc;
     border-radius: 10px;
 }
@@ -65,7 +65,7 @@
     border-radius: 10px;
     height: 35px;
     line-height: 35px;
-    background: var(--color-secondary-background-invert);
+    background: var(--color-background-secondary-invert);
 }
 
 .list-item span {
@@ -82,5 +82,5 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    background: var(--color-secondary-background-invert);
+    background: var(--color-background-secondary-invert);
 }
